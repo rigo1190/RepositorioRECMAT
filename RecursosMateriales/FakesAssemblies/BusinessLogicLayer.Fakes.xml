@@ -1,0 +1,581 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BusinessLogicLayer.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1">
+            <summary>Tipo de correcciones de compatibilidad (shim) de BusinessLogicLayer.GenericBusinessLogic`1</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.#ctor(BusinessLogicLayer.GenericBusinessLogic{`0})">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.Bind(BusinessLogicLayer.IBusinessLogic{`0})">
+            <summary>Asocia los miembros de la interfaz a las correcciones de compatibilidad (shim).</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.ConstructorDbContext">
+            <summary>Establecer el shim de GenericBusinessLogic`1.GenericBusinessLogic`1(DbContext context)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.DeleteAll">
+            <summary>Establecer el shim de GenericBusinessLogic`1.DeleteAll()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.DeleteObject">
+            <summary>Establecer el shim de GenericBusinessLogic`1.Delete(Object id)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.DeleteT0">
+            <summary>Establecer el shim de GenericBusinessLogic`1.Delete(!0 entityToDelete)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.GetByIDObject">
+            <summary>Establecer el shim de GenericBusinessLogic`1.GetByID(Object id)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.GetExpressionOfFuncOfT0BooleanFuncOfIQueryableOfT0IOrderedQueryableOfT0String">
+            <summary>Establecer el shim de GenericBusinessLogic`1.Get(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; filter, Func`2&lt;IQueryable`1&lt;!0&gt;,IOrderedQueryable`1&lt;!0&gt;&gt; orderBy, String includeProperties)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.InsertT0">
+            <summary>Establecer el shim de GenericBusinessLogic`1.Insert(!0 entity)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.LoadReferenceT0String">
+            <summary>Establecer el shim de GenericBusinessLogic`1.LoadReference(!0 entity, String navigationProperty)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.UpdateT0">
+            <summary>Establecer el shim de GenericBusinessLogic`1.Update(!0 entityToUpdate)</summary>
+        </member>
+        <member name="T:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.AllInstances.DeleteAll">
+            <summary>Establecer el shim de GenericBusinessLogic`1.DeleteAll()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.AllInstances.DeleteObject">
+            <summary>Establecer el shim de GenericBusinessLogic`1.Delete(Object id)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.AllInstances.DeleteT0">
+            <summary>Establecer el shim de GenericBusinessLogic`1.Delete(!0 entityToDelete)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.AllInstances.GetByIDObject">
+            <summary>Establecer el shim de GenericBusinessLogic`1.GetByID(Object id)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.AllInstances.GetExpressionOfFuncOfT0BooleanFuncOfIQueryableOfT0IOrderedQueryableOfT0String">
+            <summary>Establecer el shim de GenericBusinessLogic`1.Get(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; filter, Func`2&lt;IQueryable`1&lt;!0&gt;,IOrderedQueryable`1&lt;!0&gt;&gt; orderBy, String includeProperties)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.AllInstances.InsertT0">
+            <summary>Establecer el shim de GenericBusinessLogic`1.Insert(!0 entity)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.AllInstances.LoadReferenceT0String">
+            <summary>Establecer el shim de GenericBusinessLogic`1.LoadReference(!0 entity, String navigationProperty)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimGenericBusinessLogic`1.AllInstances.UpdateT0">
+            <summary>Establecer el shim de GenericBusinessLogic`1.Update(!0 entityToUpdate)</summary>
+        </member>
+        <member name="T:BusinessLogicLayer.Fakes.ShimUnitOfWork">
+            <summary>Tipo de correcciones de compatibilidad (shim) de BusinessLogicLayer.UnitOfWork</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimUnitOfWork.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimUnitOfWork.#ctor(BusinessLogicLayer.UnitOfWork)">
+            <summary>Inicializa nuevas correcciones de compatibilidad (shim) para la instancia especificada</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimUnitOfWork.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimUnitOfWork.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimUnitOfWork.Bind(System.IDisposable)">
+            <summary>Asocia los miembros de la interfaz a las correcciones de compatibilidad (shim).</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AlmacenEntradasGenericasArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenEntradasGenericasArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AlmacenEntradasGenericasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenEntradasGenericasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AlmacenSalidasGenericasArticulosGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenSalidasGenericasArticulos()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AlmacenSalidasGenericasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenSalidasGenericasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AlmacenValeSalidaArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenValeSalidaArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AlmacenValeSalidaBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenValeSalidaBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ArticulosMovimientosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ArticulosMovimientosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ArticulosMovimientosEntradasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ArticulosMovimientosEntradasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ArticulosMovimientosSalidasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ArticulosMovimientosSalidasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AsignacionesArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AsignacionesArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AsignacionesServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AsignacionesServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ClientesBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ClientesBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ComprasMenoresArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ComprasMenoresArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ComprasMenoresBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ComprasMenoresBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ComprasMenoresServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ComprasMenoresServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.Constructor">
+            <summary>Establecer el shim de UnitOfWork.UnitOfWork()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.CotizacionesArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_CotizacionesArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.CotizacionesBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_CotizacionesBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.CotizacionesServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_CotizacionesServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.Dispose">
+            <summary>Establecer el shim de UnitOfWork.Dispose()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.DisposeBoolean">
+            <summary>Establecer el shim de UnitOfWork.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.EjerciciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_EjerciciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.EmpleadosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_EmpleadosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ErrorsGet">
+            <summary>Establecer el shim de UnitOfWork.get_Errors()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.FacturasAlmacenArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FacturasAlmacenArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.FacturasAlmacenBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FacturasAlmacenBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.FacturasVentasArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FacturasVentasArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.FacturasVentasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FacturasVentasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.FormaDePagoBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FormaDePagoBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.GruposPSBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_GruposPSBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.InventarioInicialArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_InventarioInicialArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.InventarioInicialArticulosCostosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_InventarioInicialArticulosCostosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.InventarioInicialBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_InventarioInicialBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.PartidasContablesBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_PartidasContablesBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.PedidosArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_PedidosArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.PedidosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_PedidosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.PedidosServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_PedidosServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ProveedoresBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ProveedoresBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.RollBack">
+            <summary>Establecer el shim de UnitOfWork.RollBack()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.SaveChanges">
+            <summary>Establecer el shim de UnitOfWork.SaveChanges()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.ServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.SolicitudesArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_SolicitudesArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.SolicitudesBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_SolicitudesBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.SolicitudesServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_SolicitudesServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.TiempoDeEntregaBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_TiempoDeEntregaBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.TmpBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_TmpBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.UnidadesDeMedidaBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_UnidadesDeMedidaBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.UnidadesPresupuestalesBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_UnidadesPresupuestalesBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.UsuarioBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_UsuarioBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.VentasArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_VentasArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.VentasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_VentasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork._RollBackb__0DbEntityEntry">
+            <summary>Establecer el shim de UnitOfWork.&lt;RollBack&gt;b__0(DbEntityEntry e)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork._RollBackb__1DbEntityEntry">
+            <summary>Establecer el shim de UnitOfWork.&lt;RollBack&gt;b__1(DbEntityEntry x)</summary>
+        </member>
+        <member name="T:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances">
+            <summary>Definir correcciones de compatibilidad (shim) para todos los miembros de instancia</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.AlmacenEntradasGenericasArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenEntradasGenericasArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.AlmacenEntradasGenericasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenEntradasGenericasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.AlmacenSalidasGenericasArticulosGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenSalidasGenericasArticulos()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.AlmacenSalidasGenericasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenSalidasGenericasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.AlmacenValeSalidaArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenValeSalidaArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.AlmacenValeSalidaBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AlmacenValeSalidaBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ArticulosMovimientosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ArticulosMovimientosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ArticulosMovimientosEntradasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ArticulosMovimientosEntradasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ArticulosMovimientosSalidasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ArticulosMovimientosSalidasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.AsignacionesArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AsignacionesArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.AsignacionesServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_AsignacionesServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ClientesBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ClientesBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ComprasMenoresArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ComprasMenoresArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ComprasMenoresBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ComprasMenoresBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ComprasMenoresServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ComprasMenoresServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.CotizacionesArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_CotizacionesArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.CotizacionesBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_CotizacionesBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.CotizacionesServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_CotizacionesServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.Dispose">
+            <summary>Establecer el shim de UnitOfWork.Dispose()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.DisposeBoolean">
+            <summary>Establecer el shim de UnitOfWork.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.EjerciciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_EjerciciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.EmpleadosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_EmpleadosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ErrorsGet">
+            <summary>Establecer el shim de UnitOfWork.get_Errors()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.FacturasAlmacenArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FacturasAlmacenArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.FacturasAlmacenBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FacturasAlmacenBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.FacturasVentasArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FacturasVentasArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.FacturasVentasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FacturasVentasBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.FormaDePagoBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FormaDePagoBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.GruposPSBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_GruposPSBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.InventarioInicialArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_InventarioInicialArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.InventarioInicialArticulosCostosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_InventarioInicialArticulosCostosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.InventarioInicialBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_InventarioInicialBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.PartidasContablesBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_PartidasContablesBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.PedidosArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_PedidosArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.PedidosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_PedidosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.PedidosServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_PedidosServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ProveedoresBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ProveedoresBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.RollBack">
+            <summary>Establecer el shim de UnitOfWork.RollBack()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.SaveChanges">
+            <summary>Establecer el shim de UnitOfWork.SaveChanges()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.ServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_ServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.SolicitudesArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_SolicitudesArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.SolicitudesBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_SolicitudesBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.SolicitudesServiciosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_SolicitudesServiciosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.TiempoDeEntregaBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_TiempoDeEntregaBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.TmpBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_TmpBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.UnidadesDeMedidaBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_UnidadesDeMedidaBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.UnidadesPresupuestalesBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_UnidadesPresupuestalesBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.UsuarioBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_UsuarioBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.VentasArticulosBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_VentasArticulosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.VentasBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_VentasBL()</summary>
+        </member>
+        <member name="T:BusinessLogicLayer.Fakes.ShimUtilerias">
+            <summary>Tipo de correcciones de compatibilidad (shim) de BusinessLogicLayer.Utilerias</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimUtilerias.#ctor">
+            <summary>Inicializa una nueva instancia de correcciones de compatibilidad (shim)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimUtilerias.BehaveAsCurrent">
+            <summary>Asigna el comportamiento &apos;Current&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimUtilerias.BehaveAsNotImplemented">
+            <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.ShimUtilerias.ConstruyeCatalogosOf1ListOfM0DropDownListStringString``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Collections.Generic.List{``0},System.Web.UI.WebControls.DropDownList,System.String,System.String})">
+            <summary>Establecer el shim de Utilerias.ConstruyeCatalogos(List`1&lt;!!0&gt; dataList, DropDownList d, String id, String descripcion)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUtilerias.Behavior">
+            <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUtilerias.BindDropDownToEnumDropDownListType">
+            <summary>Establecer el shim de Utilerias.BindDropDownToEnum(DropDownList dropDown, Type enumType)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUtilerias.LimpiarCamposControl">
+            <summary>Establecer el shim de Utilerias.LimpiarCampos(Control padre)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUtilerias.StrToIntString">
+            <summary>Establecer el shim de Utilerias.StrToInt(String valor)</summary>
+        </member>
+        <member name="T:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1">
+            <summary>Tipo stub de BusinessLogicLayer.GenericBusinessLogic`1</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.#ctor(System.Data.Entity.DbContext)">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.Delete(System.Object)">
+            <summary>Establecer el stub de GenericBusinessLogic`1.Delete(Object id)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.Delete(`0)">
+            <summary>Establecer el stub de GenericBusinessLogic`1.Delete(!0 entityToDelete)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.DeleteAll">
+            <summary>Establecer el stub de GenericBusinessLogic`1.DeleteAll()</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.DeleteAll01">
+            <summary>Establecer el stub de GenericBusinessLogic`1.DeleteAll()</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.DeleteObject">
+            <summary>Establecer el stub de GenericBusinessLogic`1.Delete(Object id)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.DeleteT0">
+            <summary>Establecer el stub de GenericBusinessLogic`1.Delete(!0 entityToDelete)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubGenericBusinessLogic</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.Insert(`0)">
+            <summary>Establecer el stub de GenericBusinessLogic`1.Insert(!0 entity)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.InsertT0">
+            <summary>Establecer el stub de GenericBusinessLogic`1.Insert(!0 entity)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.LoadReference(`0,System.String)">
+            <summary>Establecer el stub de GenericBusinessLogic`1.LoadReference(!0 entity, String navigationProperty)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.LoadReferenceT0String">
+            <summary>Establecer el stub de GenericBusinessLogic`1.LoadReference(!0 entity, String navigationProperty)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.Update(`0)">
+            <summary>Establecer el stub de GenericBusinessLogic`1.Update(!0 entityToUpdate)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.UpdateT0">
+            <summary>Establecer el stub de GenericBusinessLogic`1.Update(!0 entityToUpdate)</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.StubGenericBusinessLogic`1.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+        <member name="T:BusinessLogicLayer.Fakes.StubIBusinessLogic`1">
+            <summary>Tipo stub de BusinessLogicLayer.IBusinessLogic`1</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.#ctor">
+            <summary>Inicializa una nueva instancia de type StubIBusinessLogic</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.bll::BusinessLogicLayer#IBusinessLogic{T}#Delete(System.Object)">
+            <summary>Establecer el stub de IBusinessLogic`1.Delete(Object id)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.bll::BusinessLogicLayer#IBusinessLogic{T}#Delete(`0)">
+            <summary>Establecer el stub de IBusinessLogic`1.Delete(!0 entityToDelete)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.bll::BusinessLogicLayer#IBusinessLogic{T}#DeleteAll">
+            <summary>Establecer el stub de IBusinessLogic`1.DeleteAll()</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.bll::BusinessLogicLayer#IBusinessLogic{T}#Get(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Func{System.Linq.IQueryable{`0},System.Linq.IOrderedQueryable{`0}},System.String)">
+            <summary>Establecer el stub de IBusinessLogic`1.Get(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; filter, Func`2&lt;IQueryable`1&lt;!0&gt;,IOrderedQueryable`1&lt;!0&gt;&gt; orderBy, String includeProperties)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.bll::BusinessLogicLayer#IBusinessLogic{T}#GetByID(System.Object)">
+            <summary>Establecer el stub de IBusinessLogic`1.GetByID(Object id)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.bll::BusinessLogicLayer#IBusinessLogic{T}#Insert(`0)">
+            <summary>Establecer el stub de IBusinessLogic`1.Insert(!0 entity)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.bll::BusinessLogicLayer#IBusinessLogic{T}#LoadReference(`0,System.String)">
+            <summary>Establecer el stub de IBusinessLogic`1.LoadReference(!0 entity, String navigationProperty)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.bll::BusinessLogicLayer#IBusinessLogic{T}#Update(`0)">
+            <summary>Establecer el stub de IBusinessLogic`1.Update(!0 entityToUpdate)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.DeleteAll">
+            <summary>Establecer el stub de IBusinessLogic`1.DeleteAll()</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.DeleteObject">
+            <summary>Establecer el stub de IBusinessLogic`1.Delete(Object id)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.DeleteT0">
+            <summary>Establecer el stub de IBusinessLogic`1.Delete(!0 entityToDelete)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.GetByIDObject">
+            <summary>Establecer el stub de IBusinessLogic`1.GetByID(Object id)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.GetExpressionOfFuncOfT0BooleanFuncOfIQueryableOfT0IOrderedQueryableOfT0String">
+            <summary>Establecer el stub de IBusinessLogic`1.Get(Expression`1&lt;Func`2&lt;!0,Boolean&gt;&gt; filter, Func`2&lt;IQueryable`1&lt;!0&gt;,IOrderedQueryable`1&lt;!0&gt;&gt; orderBy, String includeProperties)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.InsertT0">
+            <summary>Establecer el stub de IBusinessLogic`1.Insert(!0 entity)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.LoadReferenceT0String">
+            <summary>Establecer el stub de IBusinessLogic`1.LoadReference(!0 entity, String navigationProperty)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubIBusinessLogic`1.UpdateT0">
+            <summary>Establecer el stub de IBusinessLogic`1.Update(!0 entityToUpdate)</summary>
+        </member>
+        <member name="T:BusinessLogicLayer.Fakes.StubUnitOfWork">
+            <summary>Tipo stub de BusinessLogicLayer.UnitOfWork</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubUnitOfWork.#ctor">
+            <summary>Inicializa una nueva instancia</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubUnitOfWork.Dispose(System.Boolean)">
+            <summary>Establecer el stub de UnitOfWork.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="F:BusinessLogicLayer.Fakes.StubUnitOfWork.DisposeBoolean">
+            <summary>Establecer el stub de UnitOfWork.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="M:BusinessLogicLayer.Fakes.StubUnitOfWork.InitializeStub">
+            <summary>Inicializa una nueva instancia de type StubUnitOfWork</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.StubUnitOfWork.CallBase">
+            <summary>Obtiene o establece un valor que indica si debe llamarse al método base en lugar del comportamiento de reserva</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.StubUnitOfWork.InstanceBehavior">
+            <summary>Obtiene o establece el comportamiento de instancia.</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.StubUnitOfWork.InstanceObserver">
+            <summary>Obtiene o establece el observador de la instancia.</summary>
+        </member>
+    </members>
+</doc>
