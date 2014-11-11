@@ -19,7 +19,7 @@ namespace DataAccessLayer.Models
         [StringLength(500, ErrorMessage = "El campo {0} debe contener un máximo de {1} caracteres")]
         public string Nombre { get; set; }
 
-
+        //.16
         public double PorcentajeImpuesto { get; set; }
         public int UnidadDeMedidaCompraId { get; set; }
 

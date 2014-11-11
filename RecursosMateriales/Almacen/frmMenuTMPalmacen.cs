@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using DataAccessLayer;
+using DataAccessLayer.Models;
+using BusinessLogicLayer;
+
 namespace RecursosMateriales.Almacen
 {
     public partial class frmMenuTMPalmacen : Form
@@ -20,6 +24,22 @@ namespace RecursosMateriales.Almacen
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmMenuTMPalmacen_Load(object sender, EventArgs e)
+        {
+            
+
+            
+
+            
+
+        }
+
+        private void btnCargaManual_Click(object sender, EventArgs e)
+        {
+            xfInventarioInicialCargaManual xf = new xfInventarioInicialCargaManual();
+            xf.ShowDialog();
         }
     }
 }

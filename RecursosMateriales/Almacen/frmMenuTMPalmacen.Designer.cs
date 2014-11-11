@@ -28,28 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnCargaManual = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCargaArchivo = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCargaAutomatica = new DevExpress.XtraEditors.SimpleButton();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
+            this.groupControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(24, 31);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(25, 71);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // btnSalir
             // 
@@ -61,24 +47,64 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // groupControl1
+            // 
+            this.groupControl1.Controls.Add(this.btnCargaAutomatica);
+            this.groupControl1.Controls.Add(this.btnCargaArchivo);
+            this.groupControl1.Controls.Add(this.btnCargaManual);
+            this.groupControl1.Location = new System.Drawing.Point(12, 12);
+            this.groupControl1.Name = "groupControl1";
+            this.groupControl1.Size = new System.Drawing.Size(174, 128);
+            this.groupControl1.TabIndex = 3;
+            this.groupControl1.Text = "Inventario Inicial";
+            // 
+            // btnCargaManual
+            // 
+            this.btnCargaManual.Location = new System.Drawing.Point(15, 33);
+            this.btnCargaManual.Name = "btnCargaManual";
+            this.btnCargaManual.Size = new System.Drawing.Size(146, 23);
+            this.btnCargaManual.TabIndex = 0;
+            this.btnCargaManual.Text = "Carga &Manual";
+            this.btnCargaManual.Click += new System.EventHandler(this.btnCargaManual_Click);
+            // 
+            // btnCargaArchivo
+            // 
+            this.btnCargaArchivo.Location = new System.Drawing.Point(15, 62);
+            this.btnCargaArchivo.Name = "btnCargaArchivo";
+            this.btnCargaArchivo.Size = new System.Drawing.Size(146, 23);
+            this.btnCargaArchivo.TabIndex = 1;
+            this.btnCargaArchivo.Text = "Carga desde Archivo";
+            // 
+            // btnCargaAutomatica
+            // 
+            this.btnCargaAutomatica.Location = new System.Drawing.Point(15, 91);
+            this.btnCargaAutomatica.Name = "btnCargaAutomatica";
+            this.btnCargaAutomatica.Size = new System.Drawing.Size(146, 23);
+            this.btnCargaAutomatica.TabIndex = 2;
+            this.btnCargaAutomatica.Text = "Carga Automática ";
+            // 
             // frmMenuTMPalmacen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Name = "frmMenuTMPalmacen";
             this.Text = "Menu Temporal de Almacen";
+            this.Load += new System.EventHandler(this.frmMenuTMPalmacen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
+            this.groupControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnSalir;
+        private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraEditors.SimpleButton btnCargaAutomatica;
+        private DevExpress.XtraEditors.SimpleButton btnCargaArchivo;
+        private DevExpress.XtraEditors.SimpleButton btnCargaManual;
     }
 }
