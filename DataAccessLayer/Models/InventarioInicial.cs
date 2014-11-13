@@ -10,6 +10,10 @@ namespace DataAccessLayer.Models
 {
     public class InventarioInicial: Generica
     {
+        public InventarioInicial()
+        {
+            this.DetalleArticulos = new HashSet<InventarioInicialArticulos>();
+        }
 
         public int EjercicioCierre { get; set; }
         public int Ejercicio { get; set; }
@@ -18,5 +22,7 @@ namespace DataAccessLayer.Models
         public int Status { get; set; }
         public string Observaciones { get; set; }
 
+
+        public virtual ICollection<InventarioInicialArticulos> DetalleArticulos { get; set; }
     }
 }

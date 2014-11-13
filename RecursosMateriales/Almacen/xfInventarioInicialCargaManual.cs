@@ -257,8 +257,7 @@ namespace RecursosMateriales.Almacen
             try { 
 
                 SqlConnection x = new SqlConnection(fx.cnnX);
-                SqlCommand cmd = new SqlCommand("SP_articulosInicializarExistenciasyCostoPromedio",x);
-                
+                SqlCommand cmd = new SqlCommand("SP_articulosInicializarExistenciasyCostoPromedio",x);               
                  
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@iii",IdInventarioInicial);
@@ -268,18 +267,49 @@ namespace RecursosMateriales.Almacen
                 x.Close();
 
 
+
+
+                //Genera registros de Movimientos iniciales de los articulos
+                ArticulosMovimientos artMov = new ArticulosMovimientos();
+                artMov.Ejercicio = fx.xEjercicio;
+                artMov.Movimiento = 1;
+                artMov.Tipo = 0;
+                artMov.Fecha = DateTime.Now;
+                artMov.InventarioInicialId = IdInventarioInicial;
+                uow.ArticulosMovimientosBL.Insert(artMov);
+
+                
+                foreach (InventarioInicialArticulos item in lista)
+                {
+                    ArticulosMovimientosEntradas entrada = new ArticulosMovimientosEntradas();
+                        entrada.ArticuloId = item.ArticuloId;
+                        entrada.Cantidad = item.Cantidad;
+                        entrada.Importe = item.CostoPromedio;
+                        entrada.NuevoCostoPromedio = item.CostoPromedio;
+                    artMov.detallaEntradas.Add(entrada);
+
+                    InventarioInicialArticulosCostos iiaCosto = new InventarioInicialArticulosCostos();
+                        iiaCosto.ArticuloId = item.ArticuloId;
+                        iiaCosto.Orden = 1;
+                        iiaCosto.Cantidad = item.Cantidad;
+                        iiaCosto.Costo = item.CostoPromedio;
+                        iiaCosto.InventarioInicialArticuloId = item.Id;
+                    uow.InventarioInicialArticulosCostosBL.Insert(iiaCosto);
+                }
                 
 
 
                 InventarioInicial obj = uow.InventarioInicialBL.GetByID(IdInventarioInicial);
                     obj.Status = 2;
                 uow.InventarioInicialBL.Update(obj);
+                
                 uow.SaveChanges();
 
                 btnAgregar.Enabled = false;
                 btnQuitar.Enabled = false;
                 btnCerrar.Enabled = false;
 
+                MessageBox.Show("El proceso de carga de inventario inicial se ha concluido satisfactoriamente",fx.xMSGtitulo,MessageBoxButtons.OK,MessageBoxIcon.Information);
 
             }
             catch { }

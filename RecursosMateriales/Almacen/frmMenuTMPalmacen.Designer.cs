@@ -30,9 +30,9 @@
         {
             this.btnSalir = new System.Windows.Forms.Button();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnCargaManual = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCargaArchivo = new DevExpress.XtraEditors.SimpleButton();
             this.btnCargaAutomatica = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCargaArchivo = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCargaManual = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.SuspendLayout();
@@ -58,14 +58,13 @@
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "Inventario Inicial";
             // 
-            // btnCargaManual
+            // btnCargaAutomatica
             // 
-            this.btnCargaManual.Location = new System.Drawing.Point(15, 33);
-            this.btnCargaManual.Name = "btnCargaManual";
-            this.btnCargaManual.Size = new System.Drawing.Size(146, 23);
-            this.btnCargaManual.TabIndex = 0;
-            this.btnCargaManual.Text = "Carga &Manual";
-            this.btnCargaManual.Click += new System.EventHandler(this.btnCargaManual_Click);
+            this.btnCargaAutomatica.Location = new System.Drawing.Point(15, 91);
+            this.btnCargaAutomatica.Name = "btnCargaAutomatica";
+            this.btnCargaAutomatica.Size = new System.Drawing.Size(146, 23);
+            this.btnCargaAutomatica.TabIndex = 2;
+            this.btnCargaAutomatica.Text = "Carga Automática ";
             // 
             // btnCargaArchivo
             // 
@@ -74,14 +73,16 @@
             this.btnCargaArchivo.Size = new System.Drawing.Size(146, 23);
             this.btnCargaArchivo.TabIndex = 1;
             this.btnCargaArchivo.Text = "Carga desde Archivo";
+            this.btnCargaArchivo.Click += new System.EventHandler(this.btnCargaArchivo_Click);
             // 
-            // btnCargaAutomatica
+            // btnCargaManual
             // 
-            this.btnCargaAutomatica.Location = new System.Drawing.Point(15, 91);
-            this.btnCargaAutomatica.Name = "btnCargaAutomatica";
-            this.btnCargaAutomatica.Size = new System.Drawing.Size(146, 23);
-            this.btnCargaAutomatica.TabIndex = 2;
-            this.btnCargaAutomatica.Text = "Carga Automática ";
+            this.btnCargaManual.Location = new System.Drawing.Point(15, 33);
+            this.btnCargaManual.Name = "btnCargaManual";
+            this.btnCargaManual.Size = new System.Drawing.Size(146, 23);
+            this.btnCargaManual.TabIndex = 0;
+            this.btnCargaManual.Text = "Carga &Manual";
+            this.btnCargaManual.Click += new System.EventHandler(this.btnCargaManual_Click);
             // 
             // frmMenuTMPalmacen
             // 

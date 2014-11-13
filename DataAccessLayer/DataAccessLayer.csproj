@@ -85,6 +85,7 @@
     <Compile Include="Models\InventarioInicial.cs" />
     <Compile Include="Models\InventarioInicialArticulos.cs" />
     <Compile Include="Models\InventarioInicialArticulosCostos.cs" />
+    <Compile Include="Models\InventarioInicialArticulosMigrate.cs" />
     <Compile Include="Models\PartidasContables.cs" />
     <Compile Include="Models\Pedidos.cs" />
     <Compile Include="Models\PedidosArticulos.cs" />
