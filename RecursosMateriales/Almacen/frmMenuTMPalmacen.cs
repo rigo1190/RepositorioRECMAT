@@ -38,8 +38,8 @@ namespace RecursosMateriales.Almacen
 
         private void btnCargaManual_Click(object sender, EventArgs e)
         {
-            xfInventarioInicialCargaManual xf = new xfInventarioInicialCargaManual();
-            xf.ShowDialog();
+            //xfInventarioInicialCargaManual xf = new xfInventarioInicialCargaManual();
+            //xf.ShowDialog();
         }
     }
 }

@@ -41,6 +41,7 @@
             this.btnUnidadesPresupuestales.TabIndex = 0;
             this.btnUnidadesPresupuestales.Text = "Unidades Presupuestales";
             this.btnUnidadesPresupuestales.UseVisualStyleBackColor = true;
+            this.btnUnidadesPresupuestales.Click += new System.EventHandler(this.btnUnidadesPresupuestales_Click);
             // 
             // btnPartidasContables
             // 
