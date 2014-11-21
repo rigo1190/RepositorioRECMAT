@@ -113,7 +113,7 @@ namespace DataAccessLayer.Models
         public virtual DbSet<InventarioInicial> DBSInventarioInicial { get; set; }
         public virtual DbSet<InventarioInicialArticulos> DBSInventarioInicialArticulos { get; set; }
         public virtual DbSet<InventarioInicialArticulosCostos> DBSInventarioInicialArticulosCostos { get; set; }
-
+        public virtual DbSet<InventarioInicialArticulosMigrate> DBSInventarioInicialArticulosMigrate { get; set; }
 
         public virtual DbSet<AlmacenEntradasGenericas> DBSAlmacenEntradasGenericas { get; set; }
         public virtual DbSet<AlmacenEntradasGenericasArticulos> DBSAlmacenEntradasGenericasArticulos { get; set; }

@@ -199,6 +199,9 @@
         <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.InventarioInicialArticulosCostosBLGet">
             <summary>Establecer el shim de UnitOfWork.get_InventarioInicialArticulosCostosBL()</summary>
         </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.InventarioInicialArticulosMigrateBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_InventarioInicialArticulosMigrateBL()</summary>
+        </member>
         <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.InventarioInicialBLGet">
             <summary>Establecer el shim de UnitOfWork.get_InventarioInicialBL()</summary>
         </member>
@@ -360,6 +363,9 @@
         </member>
         <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.InventarioInicialArticulosCostosBLGet">
             <summary>Establecer el shim de UnitOfWork.get_InventarioInicialArticulosCostosBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.InventarioInicialArticulosMigrateBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_InventarioInicialArticulosMigrateBL()</summary>
         </member>
         <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.InventarioInicialBLGet">
             <summary>Establecer el shim de UnitOfWork.get_InventarioInicialBL()</summary>
