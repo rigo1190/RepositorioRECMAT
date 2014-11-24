@@ -436,17 +436,11 @@
         <member name="M:BusinessLogicLayer.Fakes.ShimUtilerias.BehaveAsNotImplemented">
             <summary>Asigna el comportamiento &apos;NotImplemented&apos; a todos los métodos del tipo corregido para compatibilidad</summary>
         </member>
-        <member name="M:BusinessLogicLayer.Fakes.ShimUtilerias.ConstruyeCatalogosOf1ListOfM0DropDownListStringString``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Collections.Generic.List{``0},System.Web.UI.WebControls.DropDownList,System.String,System.String})">
-            <summary>Establecer el shim de Utilerias.ConstruyeCatalogos(List`1&lt;!!0&gt; dataList, DropDownList d, String id, String descripcion)</summary>
+        <member name="M:BusinessLogicLayer.Fakes.ShimUtilerias.GenerarDataTableOf1ListOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Collections.Generic.List{``0},System.Data.DataTable})">
+            <summary>Establecer el shim de Utilerias.GenerarDataTable(List`1&lt;!!0&gt; list)</summary>
         </member>
         <member name="P:BusinessLogicLayer.Fakes.ShimUtilerias.Behavior">
             <summary>Asigna el comportamiento a todos los métodos del tipo corregido para compatibilidad</summary>
-        </member>
-        <member name="P:BusinessLogicLayer.Fakes.ShimUtilerias.BindDropDownToEnumDropDownListType">
-            <summary>Establecer el shim de Utilerias.BindDropDownToEnum(DropDownList dropDown, Type enumType)</summary>
-        </member>
-        <member name="P:BusinessLogicLayer.Fakes.ShimUtilerias.LimpiarCamposControl">
-            <summary>Establecer el shim de Utilerias.LimpiarCampos(Control padre)</summary>
         </member>
         <member name="P:BusinessLogicLayer.Fakes.ShimUtilerias.StrToIntString">
             <summary>Establecer el shim de Utilerias.StrToInt(String valor)</summary>

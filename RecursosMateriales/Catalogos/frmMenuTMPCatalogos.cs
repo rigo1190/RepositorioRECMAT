@@ -26,5 +26,11 @@ namespace RecursosMateriales.Catalogos
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmUnidadesMedida form = new frmUnidadesMedida();
+            form.Show();
+        }
     }
 }
