@@ -181,6 +181,9 @@
         <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.FacturasAlmacenBLGet">
             <summary>Establecer el shim de UnitOfWork.get_FacturasAlmacenBL()</summary>
         </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.FacturasAlmacenTMPdetalleBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FacturasAlmacenTMPdetalleBL()</summary>
+        </member>
         <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.FacturasVentasArticulosBLGet">
             <summary>Establecer el shim de UnitOfWork.get_FacturasVentasArticulosBL()</summary>
         </member>
@@ -345,6 +348,9 @@
         </member>
         <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.FacturasAlmacenBLGet">
             <summary>Establecer el shim de UnitOfWork.get_FacturasAlmacenBL()</summary>
+        </member>
+        <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.FacturasAlmacenTMPdetalleBLGet">
+            <summary>Establecer el shim de UnitOfWork.get_FacturasAlmacenTMPdetalleBL()</summary>
         </member>
         <member name="P:BusinessLogicLayer.Fakes.ShimUnitOfWork.AllInstances.FacturasVentasArticulosBLGet">
             <summary>Establecer el shim de UnitOfWork.get_FacturasVentasArticulosBL()</summary>

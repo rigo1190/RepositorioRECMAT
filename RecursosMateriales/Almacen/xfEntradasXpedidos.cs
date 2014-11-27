@@ -116,7 +116,7 @@ namespace RecursosMateriales.Almacen
 
              
             
-            List<FacturasAlmacen> listaFacturas = uow.FacturasAlmacenBL.Get(p => p.PedidoId == idPedido).ToList();
+            List<FacturasAlmacen> listaFacturas = uow.FacturasAlmacenBL.Get(p => p.PedidoId == idPedido && p.Status < 3).ToList();
             table = new DataTable();
 
             table.Columns.Add("Id");
