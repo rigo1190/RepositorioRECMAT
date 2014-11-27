@@ -91,6 +91,18 @@
     <Compile Include="Almacen\frmMenuTMPalmacen.Designer.cs">
       <DependentUpon>frmMenuTMPalmacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Almacen\xfEntradasXpedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\xfEntradasXpedidos.Designer.cs">
+      <DependentUpon>xfEntradasXpedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Almacen\xfEntradasXpedidosRegistroFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen\xfEntradasXpedidosRegistroFacturas.Designer.cs">
+      <DependentUpon>xfEntradasXpedidosRegistroFacturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Almacen\XFinformes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +153,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Almacen\frmMenuTMPalmacen.resx">
       <DependentUpon>frmMenuTMPalmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacen\xfEntradasXpedidos.resx">
+      <DependentUpon>xfEntradasXpedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Almacen\xfEntradasXpedidosRegistroFacturas.resx">
+      <DependentUpon>xfEntradasXpedidosRegistroFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Almacen\XFinformes.resx">
       <DependentUpon>XFinformes.cs</DependentUpon>

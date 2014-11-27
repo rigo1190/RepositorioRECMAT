@@ -30,6 +30,8 @@ namespace DataAccessLayer.Models
         public int? PedidoId { get; set; }
         public int? CompraMenorId { get; set; }
 
+        public int Consecutivo { get; set; }
+
         public virtual Pedidos Pedido { get; set; }
 
         public virtual ComprasMenores CompraMenor { get; set; }

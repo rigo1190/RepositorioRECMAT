@@ -125,6 +125,7 @@ namespace DataAccessLayer.Models
 
         public virtual DbSet<FacturasAlmacen> DBSFacturaAlmacen { get; set; }
         public virtual DbSet<FacturasAlmacenArticulos> DBSFacturaAlmacenArticulos { get; set; }
+        public virtual DbSet<FacturasAlmacenTMPdetalle> DBSFacturaAlmacenDetalle { get; set; }
         
         public virtual DbSet<ArticulosMovimientos> DBSArticulosMovimientos { get; set; }
         public virtual DbSet<ArticulosMovimientosEntradas> DBSArticulosMovimientosEntradas { get; set; }

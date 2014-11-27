@@ -417,6 +417,7 @@ namespace RecursosMateriales.Almacen
                     artMov.Movimiento = 1;
                     artMov.Tipo = 0;
                     artMov.Fecha = DateTime.Now;
+                    artMov.Status = 1;
                     artMov.InventarioInicialId = obj.Id;
                 uow.ArticulosMovimientosBL.Insert(artMov);
 

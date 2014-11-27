@@ -47,5 +47,11 @@ namespace RecursosMateriales.Almacen
             xfInventarioInicialCargaExcel xf = new xfInventarioInicialCargaExcel();
             xf.ShowDialog();
         }
+
+        private void simpleButton3_Click(object sender, EventArgs e)
+        {
+            xfEntradasXpedidos xf = new xfEntradasXpedidos();
+            xf.ShowDialog();
+        }
     }
 }

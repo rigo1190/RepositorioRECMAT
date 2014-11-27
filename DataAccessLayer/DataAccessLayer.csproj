@@ -77,6 +77,7 @@
     <Compile Include="Models\Empleados.cs" />
     <Compile Include="Models\FacturasAlmacenArticulos.cs" />
     <Compile Include="Models\FacturasAlmacen.cs" />
+    <Compile Include="Models\FacturasAlmacenTMPdetalle.cs" />
     <Compile Include="Models\FacturasVentas.cs" />
     <Compile Include="Models\FacturasVentasArticulos.cs" />
     <Compile Include="Models\FormaDePago.cs" />

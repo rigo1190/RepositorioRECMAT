@@ -11,6 +11,12 @@ namespace DataAccessLayer.Models
     public class Proveedores:Generica
     {
 
+
+        public Proveedores()
+        {
+            this.detallePedidos = new HashSet<Pedidos>();
+        }
+
         [Index(IsUnique = true)]
         [StringLength(50, ErrorMessage = "El campo {0} debe contener un máximo de {1} caracteres")]
         public string RFC { get; set; }
@@ -51,6 +57,8 @@ namespace DataAccessLayer.Models
         public int Status { get; set; }
 
         public int Ejercicio { get; set; }
+
+        public virtual ICollection<Pedidos> detallePedidos { get; set; }
 
     }   
 

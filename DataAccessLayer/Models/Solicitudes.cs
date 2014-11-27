@@ -24,7 +24,7 @@ namespace DataAccessLayer.Models
 
         }
 
-        public int Ejercicio;
+        public int Ejercicio { get; set; }
 
 
         [StringLength(50, ErrorMessage = "El campo {0} debe contener un máximo de {1} caracteres")]

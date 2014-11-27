@@ -24,6 +24,8 @@ namespace DataAccessLayer.Models
         public decimal ImporteFinal { get; set; }
 
 
+        public int CantidadRecibidaAlmacen { get; set; }
+
         public virtual Pedidos Pedido { get; set; }
         public virtual Articulos Articulo { get; set; }
 

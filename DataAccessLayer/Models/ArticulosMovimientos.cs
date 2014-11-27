@@ -23,6 +23,8 @@ namespace DataAccessLayer.Models
 
         public DateTime Fecha { get; set; }
 
+        public int Status { get; set; }
+
         //Entradas
         public int? InventarioInicialId { get; set; }
         public int? FacturaAlmacenId { get; set; }
