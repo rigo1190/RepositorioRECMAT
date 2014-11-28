@@ -23,6 +23,7 @@ namespace DataAccessLayer.Models
         public decimal Descuento { get; set; }
         public decimal ImporteFinal { get; set; }
 
+        public int CantidadRecibidaAlmacen { get; set; }
 
         public virtual ComprasMenores CompraMenor { get; set; }
         public virtual Articulos Articulo { get; set; }

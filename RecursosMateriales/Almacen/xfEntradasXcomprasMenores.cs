@@ -13,53 +13,45 @@ using DataAccessLayer;
 using BusinessLogicLayer;
 using DataAccessLayer.Models;
 
-
 namespace RecursosMateriales.Almacen
 {
-    public partial class xfEntradasXpedidos : DevExpress.XtraEditors.XtraForm
+    public partial class xfEntradasXcomprasMenores : DevExpress.XtraEditors.XtraForm
     {
-
         private UnitOfWork uow;
-
-        public xfEntradasXpedidos()
+        public xfEntradasXcomprasMenores()
         {
             InitializeComponent();
             uow = new UnitOfWork();
         }
 
-        private void xfEntradasXpedidos_Load(object sender, EventArgs e)
+        private void xfEntradasXcomprasMenores_Load(object sender, EventArgs e)
         {
-            cargarPedidos();
+            cargarComprasMenores();
         }
 
 
         #region Metodos
-        private void cargarPedidos()
+        private void cargarComprasMenores()
         {
-
-            List<Pedidos> listaPedidos = uow.PedidosBL.Get(p => p.Ejercicio == fx.xEjercicio && p.Solicitud.Tipo == 1 && p.Status == 1 && p.StatusAlmacen < 2).ToList();
-
-            lstPedidos.DataSource = listaPedidos.OrderBy(p => p.Folio).ToList();
-            lstPedidos.DisplayMember = "Folio";
-            lstPedidos.ValueMember = "Id";
-
-
+            List<ComprasMenores> lista = uow.ComprasMenoresBL.Get(p => p.Ejercicio == fx.xEjercicio && p.Solicitud.Tipo == 1 && p.Status == 1 && p.StatusAlmacen < 2).ToList();
+            lstCM.DataSource = lista.OrderBy(p => p.Folio).ToList();
+            lstCM.DisplayMember = "Folio";
+            lstCM.ValueMember = "Id";
         }
 
-        private void cargarDatosPedidos(int idPedido)
+        private void cargarDatosPedidos(int idCM)
         {
-                
 
-            Pedidos pedido = uow.PedidosBL.GetByID(idPedido);
+            ComprasMenores compraMenor = uow.ComprasMenoresBL.GetByID(idCM);
 
-            txtFolio.Text = pedido.Folio.ToString();
-            dateTimePicker1.Value = pedido.Fecha;
-            txtImporte.Text = pedido.Importe.ToString("C");
-            txtObs.Text = pedido.Observaciones.ToString();
-            txtUp.Text = pedido.UnidadPresupuestal.Nombre;
+            txtFolio.Text = compraMenor.Folio.ToString();
+            dateTimePicker1.Value = compraMenor.Fecha;
+            txtImporte.Text = compraMenor.Importe.ToString("C");
+            txtObs.Text = compraMenor.Observaciones.ToString();
+            txtUp.Text = compraMenor.UnidadPresupuestal.Nombre;
 
 
-            List<PedidosArticulos> lista = uow.PedidosArticulosBL.Get(p => p.PedidoId == pedido.Id).OrderBy(q => q.Articulo.Nombre).ToList();
+            List<ComprasMenoresArticulos> lista = uow.ComprasMenoresArticulosBL.Get(p => p.CompraMenorId == compraMenor.Id).OrderBy(q => q.Articulo.Nombre).ToList();
 
 
             DataTable table = new DataTable();
@@ -70,7 +62,7 @@ namespace RecursosMateriales.Almacen
             table.Columns.Add("Total");
             table.Columns.Add("Costo Unitario");
 
-            foreach (PedidosArticulos item in lista)
+            foreach (ComprasMenoresArticulos item in lista)
             {
                 DataRow row = table.NewRow();
                 row["Articulo"] = item.Articulo.Nombre;
@@ -91,13 +83,12 @@ namespace RecursosMateriales.Almacen
             dataGridView1.Columns["Total"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridView1.Columns["Costo Unitario"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
-                
+
         }
-
-
-        private void cargarFacturas(int idPedido)
+        
+        private void cargarFacturas(int idCM)
         {
-         
+
             DataTable table = new DataTable();
 
             table.Columns.Add("Articulo");
@@ -111,12 +102,12 @@ namespace RecursosMateriales.Almacen
             row1["Precio"] = "";
             row1["Total"] = "";
             table.Rows.Add(row1);
-             
+
             dataGridView3.DataSource = table;
 
-             
-            
-            List<FacturasAlmacen> listaFacturas = uow.FacturasAlmacenBL.Get(p => p.PedidoId == idPedido && p.Status < 3).ToList();
+
+
+            List<FacturasAlmacen> listaFacturas = uow.FacturasAlmacenBL.Get(p => p.CompraMenorId == idCM && p.Status < 3).ToList();
             table = new DataTable();
 
             table.Columns.Add("Id");
@@ -143,7 +134,7 @@ namespace RecursosMateriales.Almacen
             dataGridView2.Columns["Observaciones"].Width = 300;
 
         }
-
+        
         private void cargarDetallefacturas()
         {
             int idFactura = 0;
@@ -190,54 +181,47 @@ namespace RecursosMateriales.Almacen
 
 
         }
+        
         #endregion
 
-
         #region Eventos
-        private void lstPedidos_SelectedIndexChanged(object sender, EventArgs e)
+        private void lstCM_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int idPedido;
+            int idCM;
 
 
             try
             {
-                idPedido = int.Parse(lstPedidos.SelectedValue.ToString());
+                idCM  = int.Parse(lstCM.SelectedValue.ToString());
             }
             catch
             {
-                Pedidos pedido = (Pedidos) lstPedidos.SelectedValue;
-                idPedido = pedido.Id;
+                ComprasMenores compraMenor = (ComprasMenores)lstCM.SelectedValue;
+                idCM = compraMenor.Id; 
             }
 
-
-
-            cargarDatosPedidos(idPedido);
-            cargarFacturas(idPedido);
-
+            cargarDatosPedidos(idCM);
+            cargarFacturas(idCM);
         }
+
         private void dataGridView2_SelectionChanged(object sender, EventArgs e)
         {
-
             cargarDetallefacturas();
         }
 
-        
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
-            if (lstPedidos.Items.Count == 0)
+            if (lstCM.Items.Count == 0)
                 return;
 
-            xfEntradasXpedidosRegistroFacturas xf = new xfEntradasXpedidosRegistroFacturas();
-            xf.idPedido = int.Parse(lstPedidos.SelectedValue.ToString());
+            xfEntradasXcomprasMenoresRegistroFacturas xf = new xfEntradasXcomprasMenoresRegistroFacturas();
+            xf.idCM = int.Parse(lstCM.SelectedValue.ToString());
             xf.ShowDialog();
 
-            if (xf.recargarPedidos)
-                cargarPedidos();
+            if (xf.recargarCM)
+                cargarComprasMenores();
             else
-                cargarFacturas(int.Parse(lstPedidos.SelectedValue.ToString()));
-
-
+                cargarFacturas(int.Parse(lstCM.SelectedValue.ToString()));
 
 
         }
@@ -245,20 +229,21 @@ namespace RecursosMateriales.Almacen
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             int idFactura = 0;
-            int idPedido = 0;
+            int idCM = 0;
 
-            try {
+            try
+            {
                 idFactura = int.Parse(dataGridView2.Rows[dataGridView2.CurrentCell.RowIndex].Cells["Id"].Value.ToString());
-                idPedido = int.Parse(lstPedidos.SelectedValue.ToString());
+                idCM = int.Parse(lstCM.SelectedValue.ToString());
             }
             catch { return; }
 
 
-            List<FacturasAlmacen> lista = uow.FacturasAlmacenBL.Get(p=>p.PedidoId == idPedido && p.Id > idFactura).ToList();
+            List<FacturasAlmacen> lista = uow.FacturasAlmacenBL.Get(p => p.CompraMenorId == idCM && p.Id > idFactura).ToList();
 
             if (lista.Count > 0)
             {
-                MessageBox.Show("Esta factura no puede eliminarse porque este pedido tiene registrado otra factura posterior a esta",fx.xMSGtitulo,MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                MessageBox.Show("Esta factura no puede eliminarse porque esta 'Compra Menor' tiene registrado otra factura posterior a esta", fx.xMSGtitulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -267,9 +252,9 @@ namespace RecursosMateriales.Almacen
 
             //var listaExistencias = 
             var listaExistencias = from fa in uow.FacturasAlmacenArticulosBL.Get(p => p.Id == idFactura).ToList()
-                       join a in uow.ArticulosBL.Get().ToList()
-                       on fa.ArticuloId equals a.Id                       
-                       select new { fa.ArticuloId, fa.Cantidad, a.CantidadEnAlmacen};
+                                   join a in uow.ArticulosBL.Get().ToList()
+                                   on fa.ArticuloId equals a.Id
+                                   select new { fa.ArticuloId, fa.Cantidad, a.CantidadEnAlmacen };
 
             //list = list.Where(p => p.Cantidad > p.CantidadEnAlmacen).ToList();
             int i = 0;
@@ -281,7 +266,7 @@ namespace RecursosMateriales.Almacen
 
             if (i > 0)
             {
-                MessageBox.Show("Esta factura no puede eliminarse porque este pedido tiene registrado otra factura posterior a esta", fx.xMSGtitulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Esta factura no puede eliminarse porque esta 'Compra Menor' tiene registrado otra factura posterior a esta", fx.xMSGtitulo, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
@@ -289,15 +274,15 @@ namespace RecursosMateriales.Almacen
             if (MessageBox.Show("¿Esta seguro de eliminar la factura?", fx.xMSGtitulo, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
             {
 
-            
+
 
 
                 FacturasAlmacen factura = uow.FacturasAlmacenBL.GetByID(idFactura);
 
                 factura.Status = 3;
                 uow.FacturasAlmacenBL.Update(factura);
-                
-                ArticulosMovimientos bitacora = uow.ArticulosMovimientosBL.Get(p=>p.FacturaAlmacenId == idFactura).First();
+
+                ArticulosMovimientos bitacora = uow.ArticulosMovimientosBL.Get(p => p.FacturaAlmacenId == idFactura).First();
                 uow.ArticulosMovimientosBL.Update(bitacora);
 
 
@@ -349,35 +334,34 @@ namespace RecursosMateriales.Almacen
                     uow.ArticulosBL.Update(articulo);
 
                     //desafectamos le pedido
-                    PedidosArticulos pedidoArt = uow.PedidosArticulosBL.Get(p => p.PedidoId == idPedido && p.ArticuloId == articulo.Id).First();
-                    pedidoArt.CantidadRecibidaAlmacen = pedidoArt.CantidadRecibidaAlmacen - item.Cantidad;
-                    uow.PedidosArticulosBL.Update(pedidoArt);
+                    ComprasMenoresArticulos compramenorarticulo = uow.ComprasMenoresArticulosBL.Get(p => p.CompraMenorId == idCM && p.ArticuloId == articulo.Id).First();
+                    compramenorarticulo.CantidadRecibidaAlmacen = compramenorarticulo.CantidadRecibidaAlmacen - item.Cantidad;
+                    uow.ComprasMenoresArticulosBL.Update(compramenorarticulo);
 
                 }
 
-
-                Pedidos pedido = uow.PedidosBL.GetByID(idPedido);
-                pedido.StatusAlmacen = 1;
-                uow.PedidosBL.Update(pedido);
+                ComprasMenores compramenor = uow.ComprasMenoresBL.GetByID(idCM);
+                compramenor.StatusAlmacen = 1;
+                uow.ComprasMenoresBL.Update(compramenor);
 
                 uow.SaveChanges();
 
-                MessageBox.Show("La factura ha sido eliminada correctamente",fx.xMSGtitulo,MessageBoxButtons.OK,MessageBoxIcon.Information);
-                cargarFacturas(idPedido);
+                MessageBox.Show("La factura ha sido eliminada correctamente", fx.xMSGtitulo, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                cargarFacturas(idCM);
             }
 
 
 
             uow.SaveChanges();
-
         }
-                
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-        #endregion
+               
 
+        #endregion
 
     }
 }

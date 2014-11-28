@@ -15,6 +15,7 @@ namespace DataAccessLayer.Models
         public Proveedores()
         {
             this.detallePedidos = new HashSet<Pedidos>();
+            this.detalleComprasMenores = new HashSet<ComprasMenores>();
         }
 
         [Index(IsUnique = true)]
@@ -59,6 +60,7 @@ namespace DataAccessLayer.Models
         public int Ejercicio { get; set; }
 
         public virtual ICollection<Pedidos> detallePedidos { get; set; }
+        public virtual ICollection<ComprasMenores> detalleComprasMenores { get; set; }
 
     }   
 

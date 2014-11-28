@@ -53,5 +53,11 @@ namespace RecursosMateriales.Almacen
             xfEntradasXpedidos xf = new xfEntradasXpedidos();
             xf.ShowDialog();
         }
+
+        private void btnComprasMenores_Click(object sender, EventArgs e)
+        {
+            xfEntradasXcomprasMenores xf = new xfEntradasXcomprasMenores();
+            xf.ShowDialog();
+        }
     }
 }

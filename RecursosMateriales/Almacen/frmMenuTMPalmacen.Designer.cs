@@ -35,6 +35,7 @@
             this.btnCargaManual = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnComprasMenores = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -90,6 +91,7 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.btnComprasMenores);
             this.groupControl2.Controls.Add(this.simpleButton3);
             this.groupControl2.Location = new System.Drawing.Point(192, 12);
             this.groupControl2.Name = "groupControl2";
@@ -105,6 +107,15 @@
             this.simpleButton3.TabIndex = 0;
             this.simpleButton3.Text = "X Pedidos";
             this.simpleButton3.Click += new System.EventHandler(this.simpleButton3_Click);
+            // 
+            // btnComprasMenores
+            // 
+            this.btnComprasMenores.Location = new System.Drawing.Point(15, 62);
+            this.btnComprasMenores.Name = "btnComprasMenores";
+            this.btnComprasMenores.Size = new System.Drawing.Size(146, 23);
+            this.btnComprasMenores.TabIndex = 1;
+            this.btnComprasMenores.Text = "X Compras Menores";
+            this.btnComprasMenores.Click += new System.EventHandler(this.btnComprasMenores_Click);
             // 
             // frmMenuTMPalmacen
             // 
@@ -134,5 +145,6 @@
         private DevExpress.XtraEditors.SimpleButton btnCargaManual;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
+        private DevExpress.XtraEditors.SimpleButton btnComprasMenores;
     }
 }
